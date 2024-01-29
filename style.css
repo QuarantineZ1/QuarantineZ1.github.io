@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+#preloader{
+    background: white url(images/loader.gif) no-repeat center center;
+    background-size: 15%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+.main {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75)), url("QuarantineZ.mp4");
+    background-size: cover;
+    background-position: center;
+}
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    font-size: 36px;
+    color: white;
+    font-weight: bold;
+    width: 120px;
+    cursor: pointer;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navbar ul li a {
+    color: white;
+    text-transform: uppercase;
+}
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: brown;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after {
+    width: 100%;
+
+}
+.navbar li ul.dropdown li {
+    display: block;
+    width: 100%;
+}
+.navbar ul li ul.dropdown {
+    width: 100%;
+    background: black;
+    position: absolute;
+    z-index: 999;
+    display: none;
+    margin: auto;
+    padding: 30;
+}
+.navbar ul li a:hover {
+    background: transparent;
+}
+.navbar li:hover ul.dropdown {
+    display: block;
+}
+.my-logo {
+    top: 50%;
+    text-align: center;
+    margin-top: -100px;
+}
+.content {
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: white;
+    position: absolute;
+    transform: translateY(-50%);
+}   
+.content h1 {
+    font-size: 80px;
+    margin-top: 80px;
+}
+.content p {
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+button {
+    width: 200px;
+    margin: 20px 10px;
+    padding: 15px 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    background: transparent;
+    border: 3px solid orangered;
+    position: relative;
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.menu {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin-left: 50px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+span {
+    height: 100%;
+    width: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    position: absolute;
+    border-radius: 10px;
+    background: orangered;
+    transition: 0.5s;
+}
+button:hover span {
+    width: 100%;
+}
+button:hover {
+    border: none;
+}
+.sosmed {
+    display: flex;     
+    position: fixed;
+    bottom: -30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sosmed a{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    display: block;
+    font-size: 15px;
+    text-align: center;
+    color: black;
+    background-color: white;
+    line-height: 60px;
+    margin: 0 15px;
+    border-radius: 50%;
+    box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
+    transition: 0.5s ease;
+}
+
+.sosmed a i{
+    font-size: 2em;
+    color: black;
+    opacity: 0.9;
+}
+
+.sosmed a:hover{
+    color: white;
+    transform: translate(0, -30px);
+    box-shadow: 0 20px 8px rgba(0, 0, 0, 0.7);
+    
+}
+.sosmed a:nth-child(1):hover{
+    background-color: #ff0000;
+}
+.sosmed a:nth-child(3):hover{
+    background-color: rgba(255, 11, 111, 1);
+}
+.sosmed a:nth-child(5):hover{
+    background-color: #3b4fc0;
+}
+.sosmed a:hover i{
+    color: white;
+    transition: 0,5s;
+}
